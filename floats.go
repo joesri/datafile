@@ -17,7 +17,7 @@ func GetFloats(filename string) ([]float64, error) {
   i := 0
   scanner := bufio.NewScanner(file)
   for scanner.Scan() {
-    numbers, err = strconv.ParseFloat(scanner.Text(), 64)
+    number, err := strconv.ParseFloat(scanner.Text(), 64)
     if err != nil {
       return numbers, err
     }
